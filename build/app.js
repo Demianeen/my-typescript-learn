@@ -1,9 +1,6 @@
 "use strict";
-function getValue(obj, key) {
-    return obj[key];
-}
 const user = {
-    name: 'Valentin',
-    age: 25
+    name: 'Demian',
+    roles: []
 };
-console.log(getValue(user, 'name'));
+const roles = ['admin', 'user', 'super-user'];
