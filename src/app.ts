@@ -1,32 +1,17 @@
-// abstract class Controller {
-//     abstract handle(req: any): void;
-
-//     handleWithLogs (req: any) {
-//         console.log('start');
-//         this.handle(req);
-//         console.log('and');
-//     }
-// }
-
-// class UserConroller extends Controller {
-//     handle(req: any): void {
-//         console.log(req);
-//     }
-// }
-
-// const userConroller = new UserConroller();
-// userConroller.handle.apply('hjjd', ['zkxc']);
-
-interface ICheck {
-    drive: boolean;
-    [check: string]: boolean;
+interface IUser {
+    name: string;
+    age: number;
 }
 
-let a: ICheck = {
-    drive: false,
-    2: false
+type KeysOfUser = keyof IUser;
+
+function getValue<T, K  extends keyof T>(obj: T, key: K) {
+    return obj[key];
 }
 
-a.drive = true;
+const user: IUser = {
+    name: 'Valentin',
+    age: 25
+}
 
-console.log(a['req']);
+console.log(getValue(user, 'name'));
