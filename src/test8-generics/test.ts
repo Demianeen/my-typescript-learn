@@ -3,18 +3,18 @@ function toString<T>(value: T): string | undefined {
 		return value.toString();
 	}
 	switch(typeof value) {
-		case 'string':
-			return value;
-		case 'number':
-		case 'boolean':
-		case 'bigint':
-		case 'symbol':
-		case 'function':
-			return value.toString();
-		case 'object':
-			return JSON.stringify(value);
-		default: 
-			return undefined;
+	case 'string':
+		return value;
+	case 'number':
+	case 'boolean':
+	case 'bigint':
+	case 'symbol':
+	case 'function':
+		return value.toString();
+	case 'object':
+		return JSON.stringify(value);
+	default: 
+		return undefined;
 	}
 }
 
@@ -28,5 +28,5 @@ console.log(toString<Function>(foo1()));
 function foo1(): Function {
 	return function foo2() {
 
-	}
+	};
 }

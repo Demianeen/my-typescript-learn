@@ -1,7 +1,7 @@
 enum QuestionStatus {
-	PUBLSHED = "published",
-	DRAFT = "draft",
-	DELETED = "deleted"
+	PUBLSHED = 'published',
+	DRAFT = 'draft',
+	DELETED = 'deleted'
 }
 
 async function getFaqs(req: 

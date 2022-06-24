@@ -4,9 +4,9 @@ interface IForm {
 }
 
 const form: IForm = {
-    username: 'Demian',
-    password: 'Ader'
-}
+	username: 'Demian',
+	password: 'Ader'
+};
 
 type isValid = boolean;
 
@@ -15,6 +15,6 @@ type Validation<T> = {
 }
 
 const formValidation: Validation<IForm> = {
-    username: { isValid: true },
-    password: { isValid: false, errorMessage: 'Some error' }
-}
+	username: { isValid: true },
+	password: { isValid: false, errorMessage: 'Some error' }
+};

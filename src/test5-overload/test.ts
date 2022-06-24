@@ -12,6 +12,6 @@ class User1 {
 	}
 }
 
-let user1 = new User1();
+const user1 = new User1();
 user1.addSkills(['sdd', 'jsalkd']);
 console.log(user1);

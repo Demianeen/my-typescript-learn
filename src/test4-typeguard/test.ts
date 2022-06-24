@@ -9,7 +9,7 @@ enum PaymentStatus {
 	Failed = 'failed',
 }
 
-interface IPaymentRequest extends IPayment { }
+type IPaymentRequest = IPayment
 
 interface IDataSuccess extends IPayment {
 	databaseId: number;
@@ -30,7 +30,7 @@ interface IResponseFailed {
 	data: IDataFailed;
 }
 
-let response: IResponseSuccess = {
+const response: IResponseSuccess = {
 	status: PaymentStatus.Success,
 	data: {
 		sum: 100,
@@ -38,7 +38,7 @@ let response: IResponseSuccess = {
 		to: 124,
 		databaseId: 12
 	}
-}
+};
 
 function isIResponseSuccess(res: IResponseSuccess | IResponseFailed): res is IResponseSuccess {
 	return (res as IResponseSuccess).status === PaymentStatus.Success;

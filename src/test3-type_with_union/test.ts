@@ -5,16 +5,16 @@ interface Reqest {
 }
 
 interface ReplySuccess {
-	status: "success";
+	status: 'success';
 	data: Reqest & {
 		databaseId: number; 
 	}
 } 
 
 interface ReplyFailed {
-	status: "failed";
+	status: 'failed';
 	data: {
 		errorMessage: string;
 		errorCode: number;
 	}
-};
+}

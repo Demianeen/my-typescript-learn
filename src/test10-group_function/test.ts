@@ -41,17 +41,17 @@ const groupData = [
 ];
 
 function group<T extends Record<key, any>>(array: T[], key: keyof T): IGroup<T> {
-    return array.reduce((map: IGroup<T>, item) => {
-        const itemKey = item[key];
-        let currentElement = map[itemKey];
-        if (Array.isArray(currentElement)) {
-            currentElement.push(item);
-        } else {
-            currentElement = [item];
-        }
-        map[itemKey] = currentElement;
-        return map;
-    }, {})
+	return array.reduce((map: IGroup<T>, item) => {
+		const itemKey = item[key];
+		let currentElement = map[itemKey];
+		if (Array.isArray(currentElement)) {
+			currentElement.push(item);
+		} else {
+			currentElement = [item];
+		}
+		map[itemKey] = currentElement;
+		return map;
+	}, {});
 }
 
 console.log(group(groupData, 'group'));

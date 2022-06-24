@@ -16,12 +16,12 @@ const data = [
 function sortById<T extends ISort>(array: T[], sortType: SORT_ORDER = SORT_ORDER.ASCENDING): T[] {
 	return array.sort((a, b) => {
 		switch (sortType) {
-			case SORT_ORDER.ASCENDING:
-				return a.id - b.id;
-			case SORT_ORDER.DESCENDING:
-				return b.id - a.id;
+		case SORT_ORDER.ASCENDING:
+			return a.id - b.id;
+		case SORT_ORDER.DESCENDING:
+			return b.id - a.id;
 		}
-	})
+	});
 }
 
 console.log(sortById(data));
