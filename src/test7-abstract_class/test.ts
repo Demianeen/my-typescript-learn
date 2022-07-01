@@ -2,7 +2,7 @@ abstract class Logger {
 	abstract log(message: string): void;
 
 	printDate(date: Date): void {
-		this.log(date.toString());
+	    this.log(date.toString());
 	}
 }
 
